@@ -34,7 +34,7 @@ public class FindLength
     {
         double sqrt = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));//formula for finding length
         string value = Convert.ToString(Math.Round(sqrt, 2));
-        Console.WriteLine("\nLength of line "+i+" is:" + value);
+        Console.WriteLine("\nLength of line "+i+" is: "+value);
         InitializeArray.InsertingValue(value, i);
 
 
@@ -49,9 +49,16 @@ public class CheckEquality
             Console.WriteLine("Result: Both lines are equal");
 
         }
+        else if((InitializeArray.values[0]).CompareTo(InitializeArray.values[1]) > 0)
+        {   
+            //we can do below way also insted of else if directly in else
+            //string comparing = ((InitializeArray.values[0]).CompareTo(InitializeArray.values[1]) > 0) ? "Line 1 is greater than line 2" : "Line 2 is greater than line 1";
+            //Console.WriteLine(comparing);
+            Console.WriteLine("Result: Line 1 is greater than Line 2....");
+        }
         else
         {
-            Console.WriteLine("Result: Both lines are different");
+            Console.WriteLine("Result:- Line 1 is less than Line 2....");
         }
     }
 }
